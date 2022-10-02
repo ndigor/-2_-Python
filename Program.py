@@ -1,16 +1,8 @@
-﻿#1. Задача №1 -Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
-#Пример:
-#- 6782 -> 23
-#- 0,56 -> 11
-floatnumber = float(input(f'Введите вещественное(дробное) число'))
-result=0
-if floatnumber<0:
-    floatnumber*=-1
-    float_str=str(floatnumber)#Переводим число в строку
-    for i in float_str:#суммируем в цикле все цифры числа
-        if i!='.':
-            result+=int (i)
-            print (result)
+﻿# Задайте список из n чисел 
+# последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
 
-
-
+n = int(input('Enter number: ')) 
+def sequence(n):
+    return[round((1 + 1 / x)**x, 2) for x in range (1, n + 1)]   
+print(sequence(n))
+print(round(sum(sequence(n))))
