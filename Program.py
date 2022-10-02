@@ -1,16 +1,36 @@
-﻿#1. Задача №1 -Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
-#Пример:
-#- 6782 -> 23
-#- 0,56 -> 11
-floatnumber = float(input(f'Введите вещественное(дробное) число'))
-result=0
-if floatnumber<0:
-    floatnumber*=-1
-    float_str=str(floatnumber)#Переводим число в строку
-    for i in float_str:#суммируем в цикле все цифры числа
-        if i!='.':
-            result+=int (i)
-            print (result)
+﻿# Задать список из N элементов, заполненных числами из [-N, N].
+# Найти произведение элементов на указанных позициях.
+# Позиции хранятся в файле file.txt в одной строке одно число
 
+from random import randint
 
+with open('17_Mult_task.txt', 'w') as data
+    data.write('0n')
+    data.write('1n')
+    data.write('5n')
+    data.write('8n')
+    data.write('10n')
 
+def get_numbers(n)
+    return [randint(-n2, n) for i in range(-n, n + 1)]
+
+def get_data_from_file(path)
+    data = open(path, 'r')
+    dlist = [int(line.strip()) for line in data]
+    data.close()
+    return dlist
+
+def get_mult(numbers, datalist)
+    mult = 1
+    for i in datalist
+        mult = numbers[i]
+    return mult
+
+path = '17_Mult_task.txt'
+n = 10
+datalist = get_data_from_file(path)
+numbers = get_numbers(n)
+
+print(numbers)
+print(datalist)
+print(get_mult(numbers, datalist))
